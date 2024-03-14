@@ -28,7 +28,7 @@ do
         Numeric = false, -- Only allows numbers
         Finished = false, -- Only calls callback when you press enter
         Callback = function(Value)
-            getgenv().text = Value
+            _G.Text = Value
         end
     })
 
@@ -47,13 +47,13 @@ end
                     {
                         Title = "Confirm",
                         Callback = function()
-                            getgenv().text
+                            _G.Text
                         end
                     },
                     {
                         Title = "Cancel",
                         Callback = function()
-                            getgenv().text
+                            _G.Text
                         end
                     }
                 }
